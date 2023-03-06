@@ -1,3 +1,3 @@
-# Whatsapp API - Unofficial by Desta - Software Enginer RSUP Persahabatan
+# Whatsapp API - Unofficial
 
 TODO:
