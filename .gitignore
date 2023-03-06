@@ -5,3 +5,5 @@ dist
 dist/*
 .wwebjs_auth
 .wwebjs_auth/*
+yarn.lock
+package-lock.json
