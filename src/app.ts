@@ -1,17 +1,19 @@
 import express from 'express';
-import { defaultRoute } from './routers/whatsapp';
-import bodyParser from 'body-parser';
+import router from './routers';
+import { init } from './wa';
+import cors from 'cors';
 
 const app = express();
-const port = 3000;
+app.use(cors());
+app.use(express.json());
+app.use('/', router);
+app.all('*', (req, res) => res.status(404).json({ error: 'URL not found' }));
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!');
-// });
+const host = process.env.HOST || '0.0.0.0';
+const port = Number(process.env.PORT || 3000);
+const listener = () => console.log(`Server is listening on http://${host}:${port}`);
 
-app.use(bodyParser.json());
-app.use('/', defaultRoute);
-
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
-});
+(async () => {
+  await init();
+  app.listen(port, host, listener);
+})();

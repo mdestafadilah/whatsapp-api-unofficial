@@ -35,26 +35,6 @@ process.on('SIGINT', async () => {
     process.exit(0);
 });
 
-
-// API Function
-const Api = async (req: any,res: any) => {
-    let noHp = req.query.noHp;
-    const pesan = req.query.pesan;
-
-    try {
-        const user = await client.isRegisteredUser(noHp);
-        if (user) {
-            client.sendMessage(noHp,pesan);
-            res.json({ status: "Terkirim", pesan})
-        } else {
-            res.json({ status: "Gagal Terkirim", pesan: "Nomor Tidak Terdaftar"})
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({status: "error", pesan: "error server"});
-    }
+export async function init() {
+    // TODO
 }
-
-
-// Export
-export default {Api};
