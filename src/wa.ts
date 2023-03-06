@@ -5,7 +5,7 @@ import { generate } from "qrcode-terminal";
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        handleSIGINT: false,
+        ignoreDefaultArgs: ['--disable-extensions'],
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox'
