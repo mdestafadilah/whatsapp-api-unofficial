@@ -7,3 +7,4 @@ dist/*
 .wwebjs_auth/*
 yarn.lock
 package-lock.json
+.env
