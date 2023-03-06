@@ -4,6 +4,8 @@
   "description": "Whatsapp API with Whatsapp-web.js UnOfficial by Desta",
   "main": "src/app.js",
   "scripts": {
+    "dev": "npx tsc",
+    "dev-run": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
