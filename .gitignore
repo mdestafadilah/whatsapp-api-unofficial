@@ -3,3 +3,5 @@ yarn.lock
 package-lock.json
 dist
 dist/*
+.wwebjs_auth
+.wwebjs_auth/*
