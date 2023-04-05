@@ -15,7 +15,7 @@
     "url": "git+https://github.com/mdestafadilah/whatsapp-api-unofficial.git"
   },
   "keywords": [
-    "whatsapp-web.js",
+    "wwpconnect",
     "whatsapp-api",
     "rsuppersahabatan"
   ],
@@ -32,8 +32,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
-    "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.19.4"
+    "qrcode-terminal": "^0.12.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
